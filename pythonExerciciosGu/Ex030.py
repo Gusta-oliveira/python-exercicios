@@ -1,5 +1,5 @@
 num = int(input('Digite um número para saber se é par ou impar: '))
 if num % 2 == 0:
-    print('O número é par!')
+    print(f'O número {num} é PAR!')
 else:
-    print('O número é impar!')
+    print(f'O número {num} é IMPAR!')
