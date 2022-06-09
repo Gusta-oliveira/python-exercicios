@@ -1,4 +1,4 @@
-frase = input('Difite uma frase: ')
-print('A letra (a) aparece ', frase.count('a', 0,), ' vezes')
-print('A primeira letra (a) esta na posição: ', frase.index('a'))
-print('A ultima posição em que (a) aparece é: ', frase.rfind('a'))
+frase = str(input('Digite uma frase: ')).strip().lower()
+print('A letra (A) aparece ', frase.count('a', 0), ' vezes')
+print('A primeira letra (A) esta na posição: ', frase.index('a') + 1)
+print('A ultima posição em que (A) aparece é: ', frase.rfind('a') + 1)
