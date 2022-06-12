@@ -10,4 +10,3 @@ elif idade == 20:
     print('O atleta está na categoria \033[34mSÊNIOR!\033[m')
 else:
     print('O atleta está na categoria \033[34mMASTER!\033[m')
-9
