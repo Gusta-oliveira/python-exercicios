@@ -1,12 +1,20 @@
 from datetime import date
 print('Alistamento para o Exército!!')
-ano = int(input('Insira o ano de nascimento do candidato: '))
-data = date.today()
-idade = data.year - ano
-if idade == 18:
-    print('Este ano é o ano de se alistamento! Fique atento.')
-elif idade < 18:
-    print('Você ainda não precisa se alistar. Seu alistamento deve ser feito hein {}'.format(ano + 18))
-elif idade > 18:
-    print('Já passou o tempo para alistamento! O ano de alistamento foi {}'.format(ano + 18))
+sexo = str(input('Digite o sexo H/M: ')).strip().upper()
 
+if sexo == 'M':
+    print('Você é mulher e não precisa se alistar.')
+
+if sexo == 'H':
+    ano = int(input('Insira o ano de nascimento do candidato: '))
+    data = date.today().year
+    idade = data - ano
+    print('Você nasceu em {} e tem {} anos em {}'.format(ano, idade, data))
+    if idade == 18:
+        print('Este é o ano de seu alistamento')
+    elif idade < 18:
+        print('Ainda faltam {} anos para o alistamento!'.format(18 - idade))
+        print('Seu alistamento será em {}'.format(ano + 18))
+    elif idade > 18:
+        print('Você deveria ter se alistado há {}'.format(idade - 18))
+        print('Seu alistamento foi em {}'.format(ano + 18))
