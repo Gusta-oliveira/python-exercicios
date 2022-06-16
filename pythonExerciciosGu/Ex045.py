@@ -1,35 +1,45 @@
-from random import choice
+from random import randint
 from time import sleep
-escolha = str(input("""Digite sua escolha:
-[1]Pedra
-[2]Papel
-[3]Tesoura
-""")).strip().upper()
-mac = ['pedra', 'papel', 'tesoura']
-esc = choice(mac)
-print('Pedra, Papel, Tesoura')
-sleep(2)
+escolha = int(input("""Digite sua escolha:
+[0]Pedra
+[1]Papel
+[2]Tesoura
+"""))
+itens = ('pedra', 'papel', 'tesoura')
+esc = randint(0, 2)
+
+sleep(1)
+print('JO')
+sleep(1)
+print('KEN')
+sleep(1)
+print('PO!!!')
+sleep(1)
+
+print('{:=^25}'.format('JO-KEN-PO'))
+print('Computador jogou {}'.format(itens[esc]))
+print('Jogador jogou {}'.format(itens[escolha]))
 
 # Testando condição de escolha ser Pedra
-if escolha == 'PEDRA' and escolha == esc.upper():
-    print('A máquina escolheu Pedra e vocês emparatam, muito bem!')
-elif escolha != esc and escolha == 'PEDRA' and esc == 'papel':
-    print('Que pena, a máquina escolheu Papel e você perdeu!')
-elif escolha != esc and escolha == 'PEDRA' and esc == 'tesoura':
-    print('Meus Parabéns, a máquina escolheu Tesoura, você foi o vencedor!')
+if escolha == 0 and escolha == esc:
+    print('EMPATE!')
+elif escolha != esc and escolha == 0 and esc == 1:
+    print('Computador GANHOU!')
+elif escolha != esc and escolha == 0 and esc == 2:
+    print('Jogador GANHOU!')
 
 # Testando condição de escolha ser Papel
-if escolha == 'PAPEL' and escolha == esc.upper():
-    print('A maquina escolheu Papel e vocês emparataram, muito bem!')
-elif escolha != esc and escolha == 'PAPEL' and esc == 'pedra':
-    print('Meus parabéns, a máquina escolheu Pedra e você ganhou!')
-elif escolha != esc and escolha == 'PAPEL' and esc == 'tesoura':
-    print('Que pena, a máquina escolheu Tesoura e você perdeu!')
-
-# Testando condição de escolha ser Tesoura
-if escolha == 'TESOURA' and escolha == esc.upper():
-    print('A máquina escolheu Tesoura e vocês empataram, muito bem!')
-elif escolha != esc and escolha == 'TESOURA' and esc == 'papel':
-    print('Meus parabéns, a máquina escolheu Papel e você ganhou!')
-elif escolha != esc and escolha == 'TESOURA' and esc == 'pedra':
-    print('Que pena, a máquina escolheu Pedra e você perdeu!')
+if escolha == 1 and escolha == esc:
+    print('EMPATE!')
+elif escolha != esc and escolha == 1 and esc == 0:
+    print('Jogador GANHOU!')
+elif escolha != esc and escolha == 1 and esc == 2:
+    print('Computador GANHOU!')
+# Testando condição de escolha ser Tesoura2
+if escolha == 2 and escolha == esc:
+    print('EMPATE!')
+elif escolha != esc and escolha == 2 and esc == 1:
+    print('Jogador GANHOU!')
+elif escolha != esc and escolha == 2 and esc == 0:
+    print('Computador GANHOU!')
+print('=' * 25)
